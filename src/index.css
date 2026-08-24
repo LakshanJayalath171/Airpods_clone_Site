@@ -1,0 +1,380 @@
+@import "tailwindcss";
+
+/* =========================================
+   AIRPODS MAX — GLOBAL COLOR SYSTEM
+   ========================================= */
+
+:root {
+  /* Background */
+  --background: #000000;
+  --background-soft: #050607;
+
+  /* Surfaces */
+  --surface: #0d0f10;
+  --surface-hover: #151719;
+  --surface-elevated: #202326;
+
+  /* Borders */
+  --border: #2d3033;
+
+  /* Text */
+  --text-primary: #ffffff;
+  --text-heading: #ffffff;
+  --text-soft: #e8eaec;
+  --text-secondary: #8c9195;
+
+  /* Accent / Highlight */
+  --accent: #c5c9cc;
+
+  /* Effects */
+  --glow: rgba(197, 201, 204, 0.12);
+}
+
+
+/* =========================================
+   RESET
+   ========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+
+/* =========================================
+   SELECTION
+   ========================================= */
+
+::selection {
+  background: var(--accent);
+  color: #000000;
+}
+
+
+/* =========================================
+   SCROLLBAR
+   ========================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--surface-elevated);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border);
+}
+
+
+/* =========================================
+   TYPOGRAPHY
+   ========================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-heading);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* =========================================
+   COMMON CONTAINERS
+   ========================================= */
+
+.container {
+  width: min(1200px, 90%);
+  margin-inline: auto;
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: var(--background);
+}
+
+
+/* =========================================
+   SURFACES / CARDS
+   ========================================= */
+
+.surface {
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.surface-hover {
+  transition:
+    background 300ms ease,
+    border-color 300ms ease,
+    box-shadow 300ms ease;
+}
+
+.surface-hover:hover {
+  background: var(--surface-hover);
+  border-color: var(--surface-elevated);
+  box-shadow: 0 0 40px var(--glow);
+}
+
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 24px;
+
+  background: var(--text-primary);
+  color: #000000;
+
+  border: 1px solid var(--text-primary);
+  border-radius: 999px;
+
+  font-weight: 600;
+
+  transition:
+    background 250ms ease,
+    color 250ms ease,
+    transform 250ms ease,
+    box-shadow 250ms ease;
+}
+
+.btn-primary:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px var(--glow);
+}
+
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 24px;
+
+  background: transparent;
+  color: var(--text-primary);
+
+  border: 1px solid var(--border);
+  border-radius: 999px;
+
+  font-weight: 600;
+
+  transition:
+    background 250ms ease,
+    border-color 250ms ease,
+    transform 250ms ease;
+}
+
+.btn-secondary:hover {
+  background: var(--surface);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   PRODUCT GLOW
+   ========================================= */
+
+.product-glow {
+  position: relative;
+}
+
+.product-glow::after {
+  content: "";
+  position: absolute;
+
+  inset: 10%;
+
+  background: radial-gradient(
+    circle,
+    rgba(197, 201, 204, 0.12),
+    transparent 65%
+  );
+
+  filter: blur(40px);
+  z-index: -1;
+}
+
+
+/* =========================================
+   GLASS EFFECT
+   ========================================= */
+
+.glass {
+  background: rgba(13, 15, 16, 0.65);
+  border: 1px solid rgba(197, 201, 204, 0.12);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+
+/* =========================================
+   GRADIENT TEXT
+   ========================================= */
+
+.gradient-text {
+  background: linear-gradient(
+    120deg,
+    #ffffff 0%,
+    #c5c9cc 50%,
+    #8c9195 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+
+/* =========================================
+   IMAGE / MEDIA
+   ========================================= */
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.product-image {
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+}
+
+
+/* =========================================
+   ANIMATION HELPERS
+   ========================================= */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.fade-in {
+  opacity: 0;
+}
+
+.scale-in {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(32, 35, 38, 0.25),
+      transparent 55%
+    ),
+    var(--background);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 9vw, 9rem);
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  max-width: 600px;
+  margin-top: 24px;
+
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--text-secondary);
+}
+
+
+/* =========================================
+   SECTION DIVIDER
+   ========================================= */
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--border),
+    transparent
+  );
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 768px) {
+  .container {
+    width: min(92%, 1200px);
+  }
+
+  .hero-title {
+    font-size: clamp(3rem, 16vw, 6rem);
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 10px 20px;
+  }
+}
