@@ -10,8 +10,8 @@ const Hero = () => {
           </div>
 
           <div className="flex apple rounded-full items-center justify-center px-6 py-4 gap-3">
-            <h3 className="text-black text-2xl">549 $</h3>
-            <button className="bg-blue-500  rounded-full px-4 py-1 cursor-pointer">Buy</button>
+            <h3 className="text-white font-semibold text-2xl ">549 $</h3>
+            <button className="bg-blue-500  rounded-full px-4 py-1 cursor-pointer ">Buy</button>
           </div>
         </div>
     </div>
