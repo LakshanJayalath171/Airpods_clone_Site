@@ -105,6 +105,10 @@ export default function ImageSlider() {
 
   return (
     <section ref={sectionRef} className="relative w-full overflow-hidden py-20">
+
+      <div className="flex items-center justify-start w-full h-full px-10 py-4">
+        <h1 className="text-6xl font-bold text-center">Take a closer look.</h1>
+      </div>
       <div
         ref={sliderRef}
         className="
