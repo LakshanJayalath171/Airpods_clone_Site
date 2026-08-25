@@ -185,9 +185,10 @@ export default function ImageSlider() {
                 }}
                 className="
                   block
-                  h-4
+                  h-[16px]
                   rounded-full
                   bg-gray-500
+                  hover:size-4
                 "
                 style={{
                   width: index === activeIndex ? "48px" : "8px",

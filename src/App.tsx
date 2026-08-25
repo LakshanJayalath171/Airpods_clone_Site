@@ -1,6 +1,7 @@
 import Hero from "./component/Hero"
 import Navbar from "./component/Navbar"
 import Slider from "./component/Slider"
+import Video_sec from "./component/Video_sec"
 
 const App = () => {
   return (
@@ -8,6 +9,7 @@ const App = () => {
       <Navbar/>
       <Hero/>
       <Slider/>
+      <Video_sec/>
     </div>
   )
 }
