@@ -30,3 +30,23 @@ export const imageslider = [
         position: "absolute top-1/2 right-2",
     }
 ]
+
+// animated video constants
+
+export const animated_video = [
+    {
+        content:"Fully retuned from the ground up for the H2 chip, Adaptive EQ tailors sound to the bespoke fit and seal created by the ear cushions — resulting in a more consistent listening experience across different fits, movements, and ear geometry. Inward‑facing microphones measure what you’re hearing, then adjust in real‑time to deliver a richer experience — now extending to higher frequencies — that faithfully reproduces every note.",
+        icon:'',
+        position:'top-2 right-2'
+    },
+    {
+        content:"Lossless Audio and ultra‑low latency audio preserve every detail of the original recording when connecting AirPods Max 2 to your device via USB‑C — allowing listeners to experience movies and music the way they were created. Gamers can also benefit from ultra‑low latency audio, which eliminates response delay and makes games feel even more immersive.5",
+        icon:'',
+        position:'top-1/2 left-2'
+    },
+    {
+        content:"Personalized Spatial Audio with dynamic head tracking6 gives you a theater‑like experience with sound that surrounds you for movies, TV shows, and games. Using built‑in gyroscopes and accelerometers, AirPods Max and your iPhone, iPad, Mac, or Apple TV track the subtle motion of your head, anchoring sounds to your device.",
+        icon:'',
+        position:'bottom-2 right-2'
+    }
+]
