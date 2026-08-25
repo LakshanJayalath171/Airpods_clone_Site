@@ -50,3 +50,81 @@ export const animated_video = [
         position:'bottom-2 right-2'
     }
 ]
+
+//product images 
+export const product_images = [
+    {
+        color: "Black",
+        selector: "black",
+        images:[
+            "/images/black (1).png",
+            "/images/black (2).png",
+            "/images/black (3).png",
+            "/images/black (4).png",
+            "/images/black (5).png",
+            "/images/black (6).png",
+        ]
+    },
+    {
+        color: "Blue",
+        selector: "blue",
+        images:[
+            "/images/blue (1).png",
+            "/images/blue (2).png",
+            "/images/blue (3).png",
+            "/images/blue (4).png",
+            "/images/blue (5).png",
+            "/images/blue (6).png",
+        ]
+    },
+    {
+        color: "Orange",
+        selector: "orange",
+        images:[
+            "/images/orange (1).png",
+            "/images/orange (2).png",
+            "/images/orange (3).png",
+            "/images/orange (4).png",
+            "/images/orange (5).png",
+            "/images/orange (6).png",
+        ]
+    },
+    {
+        color: "Purple",
+        selector: "purple",
+        images:[
+            "/images/purple (1).png",
+            "/images/purple (2).png",
+            "/images/purple (3).png",
+            "/images/purple (4).png",
+            "/images/purple (5).png",
+            "/images/purple (6).png",
+        ]
+    },
+    {
+        color: "Starlight",
+        selector: "starlight",
+        images:[
+            "/images/starlight (1).png",
+            "/images/starlight (2).png",
+            "/images/starlight (3).png",
+            "/images/starlight (4).png",
+            "/images/starlight (5).png",
+            "/images/starlight (6).png",
+        ]
+    }
+]
+
+//product quotes
+export const product_quotes = [
+    "Press the Digital Crown to play and pause music, take a photo or video, or mute and unmute yourself on calls. Press twice to skip between tracks or end calls, or turn it to precisely control volume.4",
+    "",
+
+    "The canopy spanning the headband is made from a breathable knit mesh, distributing weight to reduce on‑head pressure.",
+
+    "The cushions are crafted with acoustically engineered memory foam and a custom-designed mesh textile — creating a fit that is the foundation of incredible sound.",
+
+    "The beautifully anodized aluminum cups feature a mechanism that allows each cup to rotate independently and balance pressure.",
+
+    "The telescoping arms smoothly extend from the stainless steel frame — staying where you set them for a consistent fit and seal."
+]

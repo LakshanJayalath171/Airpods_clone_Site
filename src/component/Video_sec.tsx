@@ -100,7 +100,7 @@ const Video_sec = () => {
               ref={(element) => {
                 itemRefs.current[index] = element;
               }}
-              className={`absolute ${item.position} z-10 w-96 opacity-0`}
+              className={`absolute ${item.position} z-10 w-96 opacity-0 apple px-6 py-2`}
             >
               <img src={item.icon.replace("/public", "")} alt="" className="h-12 w-14" />
               <h2 className="text-white text-2xl font-bold">{item.content}</h2>

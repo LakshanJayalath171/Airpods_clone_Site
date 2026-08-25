@@ -1,5 +1,6 @@
 import Hero from "./component/Hero"
 import Navbar from "./component/Navbar"
+import Product from "./component/Product"
 import Slider from "./component/Slider"
 import Video_sec from "./component/Video_sec"
 
@@ -10,6 +11,7 @@ const App = () => {
       <Hero/>
       <Slider/>
       <Video_sec/>
+      <Product/>
     </div>
   )
 }
