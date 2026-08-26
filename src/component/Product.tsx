@@ -139,7 +139,7 @@ const Product = () => {
       </div>
       </div>
 
-      <div className="flex items-center justify-center absolute bottom-6 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
+      <div className="flex items-center justify-center absolute -bottom-4 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
         <div className="apple rounded-4xl gap-2 px-6 py-4 flex items-center justify-center gap-4">
           <div className={`w-6 h-6 rounded-full bg-[#22252a] border border-solid  cursor-pointer ${selectedColor === 0 ? 'border-blue' : ''}`} onClick={()=>setSelectedColor(0)}></div>
           <div className={`w-6 h-6 rounded-full bg-[#91a9b5] border border-solid  cursor-pointer ${selectedColor === 1 ? 'border-blue' : ''}`} onClick={()=>setSelectedColor(1)}></div>

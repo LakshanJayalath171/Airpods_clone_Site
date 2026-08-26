@@ -1,6 +1,9 @@
 import { useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { imageslider } from "../../constants";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function ImageSlider() {
   const sliderRef = useRef<HTMLDivElement | null>(null);
@@ -74,34 +77,77 @@ export default function ImageSlider() {
     });
 
     setActiveIndex(index);
-
-    useLayoutEffect(() => {
-      if (!sectionRef.current || !sliderRef.current) return;
-
-      const ctx = gsap.context(() => {
-        gsap.set(sliderRef.current, {
-          opacity: 0,
-          y: 100,
-          scale: 0.96,
-        });
-
-        gsap.to(sliderRef.current, {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          duration: 1.2,
-          ease: "power4.out",
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top 50%",
-            toggleActions: "play none none reverse",
-          },
-        });
-      }, sectionRef);
-
-      return () => ctx.revert();
-    }, []);
   };
+
+  useLayoutEffect(() => {
+    if (!sectionRef.current || !sliderRef.current) return;
+
+    const ctx = gsap.context(() => {
+      gsap.set(sliderRef.current, {
+        opacity: 0,
+        y: 100,
+        scale: 0.96,
+      });
+
+      gsap.to(sliderRef.current, {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        duration: 1.2,
+        ease: "power4.out",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 50%",
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      const indicator = document.getElementById("indicator-container");
+      if (!indicator) return;
+
+      gsap.set(indicator, {
+        autoAlpha: 0,
+        y: 24,
+        position: "fixed",
+        left: "50%",
+        bottom: 24,
+        xPercent: -50,
+        zIndex: 50,
+      });
+
+      const showIndicator = () => {
+        gsap.to(indicator, {
+          autoAlpha: 1,
+          y: 0,
+          duration: 0.45,
+          ease: "power3.out",
+          overwrite: true,
+        });
+      };
+
+      const hideIndicator = () => {
+        gsap.to(indicator, {
+          autoAlpha: 0,
+          y: 24,
+          duration: 0.35,
+          ease: "power3.in",
+          overwrite: true,
+        });
+      };
+
+      ScrollTrigger.create({
+        trigger: sectionRef.current,
+        start: "top 50%",
+        end: "bottom 50%",
+        onEnter: showIndicator,
+        onLeave: hideIndicator,
+        onEnterBack: showIndicator,
+        onLeaveBack: hideIndicator,
+      });
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
 
   return (
     <section ref={sectionRef} className="relative w-full overflow-hidden py-20">
@@ -155,10 +201,12 @@ export default function ImageSlider() {
           </div>
         ))}
       </div>
-      <div className="mt-10 flex justify-center">
+      <div className="mt-10 flex justify-center w-full" id="indicator-container">
         <div
           className="
             apple
+            border-2
+            border-blue-500
             flex
             h-16
             w-72
