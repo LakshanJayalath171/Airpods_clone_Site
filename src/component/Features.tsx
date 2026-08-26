@@ -53,9 +53,14 @@ const Features = () => {
                                     ref={(element) => {
                                         cardRefs.current[feature.id - 1] = element
                                     }}
-                                    className="mb-10 w-[calc((100%-4rem)/3)] shrink-0"
+                                    className="mb-10 relative w-[calc((100%-4rem)/3)] shrink-0"
                                 >
                     <img src={feature.image} alt="Feature" className="w-full h-auto mb-4 rounded-3xl" />
+                    {feature.spaecial?(
+                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-black font-bold text-4xl py-2  rounded-full">
+                            {feature.spaecial}
+                        </div>
+                    ): null}
                     <p className="text-lg">{feature.content}</p>
                 </div>
             ))}

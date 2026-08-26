@@ -135,6 +135,7 @@ export const features = [
     {
         id: 1,
         image: "/images/Features (1).jpg",
+        spaecial:"Up to20 hrs of listening time",
         content: "Battery. Up to 20 hours of listening or movie watching with Active Noise Cancellation and Spatial Audio enabled.8",
     },
     {
