@@ -128,3 +128,39 @@ export const product_quotes = [
 
     "The telescoping arms smoothly extend from the stainless steel frame — staying where you set them for a consistent fit and seal."
 ]
+
+//features section
+
+export const features = [
+    {
+        id: 1,
+        image: "/images/features (1).jpg",
+        content: "Battery. Up to 20 hours of listening or movie watching with Active Noise Cancellation and Spatial Audio enabled.8",
+    },
+    {
+        id: 2,
+        image: "/images/features (2).jpg",
+        content: "Audio Sharing.11 With just a tap to connect, you can easily share an audio stream between two sets of AirPods on your iPhone, iPad, Mac, or Apple TV.",
+    },
+    {
+        id: 3,
+        image: "/images/features (3).jpg",
+        content:"Automatic Switching10 and on-head detection. If you’re playing music on your Mac, you’ll be able to answer a call on your iPhone — without having to switch devices. Your AirPods Max sense when you take it off your head and will pause playback until you put it back on."
+    },
+    {
+        id: 4,
+        image: "/images/features (4).jpg",
+        content:"Audio Sharing.11 With just a tap to connect, you can easily share an audio stream between two sets of AirPods on your iPhone, iPad, Mac, or Apple TV."
+    },
+    {
+        id: 5,
+        image: "/images/features (5).jpg",
+        content:"USB‑C Charging. The USB‑C connector lets you charge your AirPods Max 2 with the same cable that charges your iPhone, iPad, Mac, or other Apple devices."
+    },
+    {
+        id: 6,
+        image: "/images/features (6).jpg",
+        content:"Smart Case. When stored in the soft, slim Smart Case, AirPods Max enter an ultra‑low‑power state."
+    }
+
+]
