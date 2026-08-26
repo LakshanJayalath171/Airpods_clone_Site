@@ -73,11 +73,11 @@ const Features = () => {
                         aria-label="Previous features"
                         onClick={() => goToSlide(activeIndex - 1)}
                         disabled={activeIndex === 0}
-                        className="cursor-pointer apple px-3 text-2xl disabled:cursor-not-allowed disabled:opacity-30"
+                        className="cursor-pointer rounded-full apple px-3 text-2xl disabled:cursor-not-allowed disabled:opacity-30"
                     >
                         <ChevronLeft/>
                     </button>
-                    <div className="apple px-6 py-2 flex items-center justify-center">
+                    <div className="apple rounded-full px-6 py-2 flex items-center justify-center">
                         {Array.from({ length: maxIndex + 1 }, (_, index) => (
                         <button
                             key={index}
@@ -98,7 +98,7 @@ const Features = () => {
                         aria-label="Next features"
                         onClick={() => goToSlide(activeIndex + 1)}
                         disabled={activeIndex === maxIndex}
-                        className="cursor-pointer apple px-3 text-2xl disabled:cursor-not-allowed disabled:opacity-30"
+                        className="cursor-pointer apple rounded-full px-3 text-2xl disabled:cursor-not-allowed disabled:opacity-30"
                     >
                         <ChevronRight />
                     </button>

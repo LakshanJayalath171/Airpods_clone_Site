@@ -1,4 +1,5 @@
 import Features from "./component/Features"
+import Footer from "./component/Footer"
 import Hero from "./component/Hero"
 import Navbar from "./component/Navbar"
 import Product from "./component/Product"
@@ -14,6 +15,7 @@ const App = () => {
       <Video_sec/>
       <Product/>
       <Features/>
+      <Footer/>
     </div>
   )
 }
